@@ -1,0 +1,40 @@
+Here is the extracted data in a markdown table:
+
+| Data           | Description               | Correlation Strength | Context Phrase             | Explanation                    |
+|----------------|---------------------------|----------------------|----------------------------|--------------------------------|
+| 47              | Number of years since the company was created                      | High                   | "since 1977, o Grupo Boticário é uma empresa brasileira..." | The number of years a company has been in operation is likely to be related to its size. A larger age would indicate more time for growth and expansion. |
+| 99              | Percentage of the Brazilian territory where the company operates  | Moderate               | "O Grupo Boticário está presente em 99% do território brasileiro..." | The percentage of a country's territory that a company covers is an indicator of its size, with larger companies likely to operate in a greater area. |
+| 5 milhões       | Number of people who are benefited by the company's actions   | Moderate               | "mais de 500 mil pessoas" are being abastecidas pelo rio Miringuava... | The number of people benefiting from a company's actions is an indicator of its size, with larger companies likely to have more employees and contractors. |
+| 3.134          | Number of active suppliers for the year                      | Moderate               | "A relação comercial com os fornecedores começa com a homologação..." | The number of active suppliers a company has indicates its size, with larger companies having more suppliers. |
+| 13%            | Percentage of all vacancies that were affirmative     | High                   | "Em 2023, foram mais de 1.200 vagas abertas para esses públicos prioritários..." | The percentage of a company's vacancies that are affirmative for underrepresented groups is an indicator of its diversity and inclusion efforts, which can be related to its size. A larger company may have more opportunities for diverse hiring. |
+| 70              | Percentage of employees in leadership positions who are women | High                   | "Em 2023, o Grupo Boticário intensificou seu compromisso com a diversidade..." | The percentage of women in leadership positions within a company is an indicator of its diversity and inclusion efforts, which can be related to its size. A larger company may have more opportunities for women's advancement. |
+| 40%            | Percentage of employees who are black or brown               | High                   | "Em 2023, o Grupo Boticário intensificou seu compromisso com a diversidade..." | The percentage of black or brown employees within a company is an indicator of its diversity and inclusion efforts, which can be related to its size. A larger company may have more opportunities for underrepresented groups' hiring. |
+| 14.955         | Number of total employees in the company                      | High                   | "O Grupo Boticário monitora e avalia a geração e destinação dos resíduos..." | The number of total employees within a company is an indicator of its size, with larger companies having more employees. |
+| 100%          | Percentage of suppliers who have met the Group's ESG standards | High                   | "Também não foram identificados fornecedores ou operações..." | The percentage of suppliers meeting a company's ESG standards indicates its commitment to sustainability and can be related to its size, with larger companies having more suppliers. |
+| 1.655.991     | Total reduction in energy consumption by the company         | High                   | "O Grupo teve uma redução de consumo energético..." | The total reduction in a company's energy consumption is an indicator of its sustainability efforts and can be related to its size, with larger companies having more energy-efficient operations. |
+| 46%           | Percentage of employees who are women                          | High                   | "Em 2023, o Grupo Boticário intensificou seu compromisso com a diversidade..." | The percentage of women employees within a company is an indicator of its diversity and inclusion efforts, which can be related to its size. A larger company may have more opportunities for women's advancement. |
+| $2 bilhões     | Value of the sustainability-linked bond issued by the company  | High                   | "Em 2023, o Grupo Boticário emitiu títulos associados ao Desempenho ESG..." | The value of a company's sustainability-linked bond is an indicator of its commitment to environmental and social responsibility and can be related to its size, with larger companies having more resources for sustainable investments. |
+
+Please note that the Correlation Strength values are subjective and based on my understanding of the context.[GIN] 2024/09/12 - 20:37:06 | 200 |      1h16m54s |       127.0.0.1 | POST     "/api/generate"
+
+PROMPT_TEMPLATE4 = """
+From the following context, extract all numerical data and determine which of them most strongly correlates with the feature: {feature}. Provide a ranked list of the numerical data along with their correlation values or strength of association with this feature.
+
+Context: {context}
+
+Feature of interest: {feature}
+
+Please provide all the following information in a single markdown table:
+
+1. Data: The extracted numerical data.
+2. Description: A description of what each numerical data point represents.
+3. Correlation Strength: The correlation strength or measure of association with {feature}.
+4. Context Phrase: A short phrase or sentence from the context where the numerical data was found.
+5. Explanation: An explanation of why this numerical data correlates with the feature.
+
+Output: A single markdown table in this format:
+
+| Data           | Description               | Correlation Strength | Context Phrase             | Explanation                    |
+|----------------|---------------------------|----------------------|----------------------------|--------------------------------|
+| Example Data   | Description of the Data   | Example Correlation  | Phrase where it was found  | Explanation of the correlation |
+"""
